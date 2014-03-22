@@ -1,0 +1,23 @@
+{
+  "name": "cudos-io",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "3.0.2",
+    "jade": "1.3.0",
+    "mongoose": "3.8.8"
+  },
+  "description": "The Internet's Like Button",
+  "main": "app.js",
+  "keywords": [
+    "cudos"
+  ],
+  "engines": {
+    "node": "0.10.x"
+  },
+  "author": "Jared Wright <jawerty210@gmail.com> (http://wrightdev.herokuapp.com/)",
+  "license": "MIT"
+}
