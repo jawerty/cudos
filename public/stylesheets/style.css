@@ -1,8 +1,114 @@
+/* 
+	red - #ff6b54
+	green - #6bfa37
+*/
+
+* {
+	font-family: helvetica;
+	font-size: 12px;
+	color: #404040;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding: 20px 100px;
+	min-width: 800px;
 }
 
 a {
-  color: #00B7FF;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #ff6b54;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	font-size: 16px;
+}
+
+#header {
+	width:100%;
+	float:left;
+}
+
+#logo {
+	float: left;
+	vertical-align: middle;
+	margin-top: 16px;
+	height: 90px;
+	width:90px;
+}
+
+#title {
+	vertical-align:middle;
+	float:left;
+}
+
+#tabs {
+	margin-top: 50px;
+	float:right;
+}
+
+#tabs li {
+	display: inline;
+	margin: 10px;
+}	
+
+#tabs li a {
+	font-size: 25px;
+	color: #505050;
+}
+
+#tabs li a:hover {
+	color: #ff6b54;
+}
+
+
+
+#content {
+	width:100%;
+	float:left;
+	margin: 40px 0px;
+	background-color: #f0f0f0;
+}
+
+#content li {
+	margin: 10px;
+}
+
+#content li a {
+	font-size: 16px;
+}
+
+#content li a:hover {
+	color: #ff6b54;
+}
+/*
+.link-odd {
+	color: #404040;
+}
+
+.link-odd:hover {
+	color: #ff6b54;
+	text-decoration: underline;
+}
+
+.link-even {
+	color: #404040;
+}
+
+.link-even:hover {
+	color: #6bfa37;
+	text-decoration: underline;
+}
+*/
+#footer {
+	width:100%;
+	margin: 0px auto;
+	text-align: center;
 }

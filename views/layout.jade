@@ -1,7 +1,28 @@
-doctype 5
+doctype html
+
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+
+	body
+		div(id="header")
+			div(id="title")
+				a(href="/")
+					img(src="images/cudos_red_2.png" id="logo")
+					img(src="images/cudos_logo_red.png" id="title")
+			div(id="tabs")
+				li
+					a(href="#") button
+				li
+					a(href="/about") about
+				li
+					a(href="#") signup
+
+	div(id="content")
+		
+		block content
+	
+	div(id="footer")
+		Copyright &copy; Jared Wright 2014
