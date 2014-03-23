@@ -16,6 +16,7 @@ function genID()
 exports.generate = function (req, res) {	
 	res.render("generate", {title: "Cudos", button: _button, error: _error})
 	_error = ""
+	_button = ""
 };
 
 exports.generate_post = function (req, res) {
@@ -23,7 +24,6 @@ exports.generate_post = function (req, res) {
 	category = req.body.category
 
 	h = genID()
-	_button = "<iframe src='http://cudos-io.herokuapp.com/btn/"+h+"' name="+title+"></iframe>"
 
 	if(site.findOne({bid: h}, function(err, sites){
  		if(sites){
@@ -36,9 +36,10 @@ exports.generate_post = function (req, res) {
 				category: category,
 				bid: h
 		    });
-		    
+
 		    newSite.save();
 		    _error = "Here's your button, nigga"
+		    _button = "<iframe src='http://cudos-io.herokuapp.com/btn/"+h+"' name="+title+"></iframe>"
 
  			res.redirect("/getcudos");
 
@@ -53,7 +54,10 @@ exports.location = function (req, res) {
 
 	if(site.findOne({bid: bid}, function(err, match){
 		if (match) {
-
+			cudos = match.cudos
+			res.render("button", {cudos: cudos});
+		} else {
+			console.log("not working")
 		}
 	}));
 };

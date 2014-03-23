@@ -1,14 +1,16 @@
 extends layout
 block content
 	div(style="text-align: center; border: 1px solid #ccc;")
-		h1(style="width: 100%; font-size: 300%;") Create your cudos button
+		h1(style="width: 100%; font-size: 300%;") Create your Cudos button
 		div(style="padding:5%;font-size: 24px;border: 1px solid #ccc;")
 			form(method="post" action="/getcudos")
-				p= error
-				input(type="text", name="title", style="padding: 1%; font-size: 200%;" placeholder="Enter your title")
+				p(style="font-size: 16px") #{error}
+				br
+				div(style="border-radius: 5px;font-size: 24px; margin-bottom: 20px;")= button 
+				input(type="text", name="title", style="padding: 1%; font-size: 200%;" placeholder="Enter your title" REQUIRED)
 				br
 				br
-				input(type="text", name="category", style="padding: 1%; font-size: 200%;" placeholder="Enter your category")
+				input(type="text", name="category", style="padding: 1%; font-size: 200%;" placeholder="Enter your category" REQUIRED)
 				br
 				br
 				input(type="submit", value="Get Cudos", style="background-color: #ff6b54; outline: none; box-shadow: none; border-radius: 5px; color: #fff; padding: 1%; font-size: 150%")
