@@ -40,8 +40,10 @@ li {
     background-color: #ffe9dd;
     border-bottom: 1px solid #ff6b54;
     /*padding: 5px;*/
-	width:100%;
+	width:80%;
 	float:left;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 #logo {
@@ -50,6 +52,7 @@ li {
 	margin-top: 16px;
 	height: 90px;
 	width:90px;
+
 }
 
 #title {
@@ -67,8 +70,6 @@ li {
     float: top;
   	margin-top: -32%;
   	display: inline;
-
-
   }
 #theHeadC:hover { background-color: black; opacity: 0.7;}
 
@@ -107,6 +108,8 @@ li {
 	float:left;
 	margin: 1% 0px;
 	background-color: #f0f0f0;
+	padding-left: 10%;
+	padding-right: 10%; 
 }
 
 #content li {
