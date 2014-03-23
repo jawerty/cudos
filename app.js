@@ -29,15 +29,18 @@ app.configure(function(){
 });
 
 app.configure('development', function(){
+  ROOT = "http://localhost:3000"
   app.use(express.errorHandler());
 });
 
 app.configure('production', function(){
+  ROOT = "http://cudos-io.herokuapp.com"
   app.use(express.errorHandler());
 });
 
 app.get('/', home.home);
 app.get('/btn/:bid', button.location);
+app.post('/btn/:bid', button.location_post);
 app.get('/getcudos', button.generate);
 app.post('/getcudos', button.generate_post);
 app.get('/c/:category/:type', categories.index);

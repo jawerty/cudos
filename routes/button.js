@@ -1,6 +1,8 @@
-mongoose = require("mongoose")
+mongoose = require("mongoose");
 require( '../db' );
-site = mongoose.model('site')
+site = mongoose.model('site');
+util = require("util");
+
 
 function genID()
 {
@@ -36,10 +38,9 @@ exports.generate_post = function (req, res) {
 				category: category,
 				bid: h
 		    });
-
 		    newSite.save();
 		    _error = "Here's your button, nigga"
-		    _button = "<iframe src='http://cudos-io.herokuapp.com/btn/"+h+"' name="+title+"></iframe>"
+		    _button = "<div id='cudos_button'></div><script type='text/javascript' >url = document.URL;iframe = document.createElement('IFRAME'); iframe.setAttribute('src', 'http://cudos-io.herokuapp.com/btn/"+h+"?url='+url);iframe.style.width = 120+'px'; iframe.style.height = 60+'px'; iframe.style.name='"+title+"'; document.getElementById('cudos_button').appendChild(iframe); </script>"
 
  			res.redirect("/getcudos");
 
@@ -51,13 +52,35 @@ exports.generate_post = function (req, res) {
 
 exports.location = function (req, res) {
 	bid = req.params.bid
+	link = req.query.url;
 
+	_url = ROOT + "/btn/" + bid
+	console.log(ROOT)
 	if(site.findOne({bid: bid}, function(err, match){
 		if (match) {
 			cudos = match.cudos
-			res.render("button", {cudos: cudos});
+			res.render("button", {cudos: cudos, url: _url, bid: bid, link: link});
 		} else {
 			console.log("not working")
+		}
+	}));
+};
+
+exports.location_post = function (req, res) {
+	bid = req.body.bid;
+	cudos = req.body.cudos;
+	link = req.body.link;
+	console.log("link: "+link)
+	if(site.findOne({bid: bid}, function(err, sites){
+		if (sites) {
+			sites.cudos = cudos
+			sites.link = link
+
+		    sites.save();
+		    res.end();
+		} else {
+			console.log("not working")
+			res.end();
 		}
 	}));
 };

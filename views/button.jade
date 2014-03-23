@@ -5,15 +5,26 @@ html
     link(rel='stylesheet', href='/stylesheets/button.css')
     script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
   body
-
-    input(src="../images/theC.png" type="image" id="theC")
+    form(method="post", action="#{url}")
+      input(src="../images/theC.png" type="image" id="theC")
+      input(type="hidden", name="cudos", value="#{cudos}")
+      input(type="hidden", name="bid", value="#{bid}")
+      input(type="hidden", name="link", value="#{link}")
     div(id="counter")= cudos
 
     script(type="text/javascript").
       buttonEnabled = new Boolean(1);
       var theC = document.getElementById("theC");
       var counter = document.getElementById("counter");
+      clicked = false;
       theC.onclick=function(){
+
+        if (clicked == false) {
+           $("#counter").text(parseInt($("#counter").text()+1))
+           clicked = true
+        }
+       
+
         if (counter.style.opacity == 0) {
           $("#counter").fadeIn()
         }
