@@ -104,12 +104,12 @@ li {
 }
 
 #content {
-	width:81%;
+	width:82%;
 	float:left;
 	margin: 1% 0px;
 	background-color: #f0f0f0;
 	padding-left: 9%;
-	padding-right: 9%; 
+	padding-right: 9%;
 }
 
 #content li {
@@ -144,11 +144,12 @@ li {
 */
 
 #footer {
+  clear: both;
 	width:100%;
 	margin: 0px auto;
 	text-align: center;
+    position: relative;
 }
-
 #categories a {
 	color: #ff6b54;
 	font-size: 25px;
