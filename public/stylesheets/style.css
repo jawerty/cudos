@@ -48,8 +48,7 @@ li {
 
 #logo {
 	float: left;
-	margin-top: 16px;
-	margin-bottom: 10px;
+	margin-top: 25px;
 	height: 90px;
 	width:90px;
 
@@ -94,7 +93,7 @@ li {
 }
 
 #categories {
-	margin-top: 5%;
+	margin-top: 10%;
 	word-break: break-all;
 }
 
