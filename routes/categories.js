@@ -19,7 +19,7 @@ exports.index = function(req, res) {
 		t = "date"
 	}
     
-	site.find({category: category}).sort('-'+t).limit(25).skip(skipNum).exec(function(err, sites) { 
+	site.find({category: category.toLowerCase()}).sort('-'+t).limit(25).skip(skipNum).exec(function(err, sites) { 
 		if (sites) {
 			res.render('categories', {
 		        title: 'cudos',
