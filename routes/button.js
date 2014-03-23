@@ -36,6 +36,7 @@ exports.generate_post = function (req, res) {
 				category: category,
 				bid: h
 		    });
+		    
 		    newSite.save();
 		    _error = "Here's your button, nigga"
 
