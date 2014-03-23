@@ -3,5 +3,6 @@ exports.home = function (req, res) {
         title: 'cudos',
         layout: 'layout'
     });
-
 };
+
+

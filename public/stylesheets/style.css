@@ -19,7 +19,6 @@ a {
 }
 
 a:hover {
-	text-decoration: underline;
 	color: #ff6b54;
 }
 
@@ -107,6 +106,7 @@ li {
 	text-decoration: underline;
 }
 */
+
 #footer {
 	width:100%;
 	margin: 0px auto;
