@@ -10,7 +10,11 @@
 }
 
 body {
+<<<<<<< HEAD
 	padding: 0px 0px;
+=======
+	/*padding: 20px 100px;*/
+>>>>>>> e6af3e08ead9e20dee16878867737763b0ed3889
 	min-width: 800px;
 }
 
