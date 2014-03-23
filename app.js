@@ -8,6 +8,7 @@ var express = require('express')
   , user = require('./routes/user')
   , button = require('./routes/button')
   , categories = require('./routes/categories')
+  , comments = require('./routes/comments')
   , http = require('http')
   , path = require('path');
 
@@ -46,7 +47,7 @@ app.post('/getcudos', button.generate_post);
 app.get('/c/:category', categories.index);
 app.get('/c/:category/:type', categories.index);
 app.get('/u/:username', user.list);
-
+app.get("/post/:bid", comments.home);
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });

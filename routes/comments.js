@@ -1,14 +1,14 @@
 mongoose = require("mongoose")
 require( '../db' );
-comments = mongoose.model('comments')
+site = mongoose.model('site')
 
 exports.home = function (req, res) {
 	page = req.query.page || 0
 	skipNum = parseInt(page) * 25 + 1  || 0
 
-	comments.find({}).sort('-date').exec(function(err, comments) { 
+	site.find({}).sort('-date').exec(function(err, comments) { 
 		if (comments) {
-			res.render('categories', {
+			res.render('comments', {
 		        title: 'cudos',
 		        layout: 'layout',
 		        comments: comments

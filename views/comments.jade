@@ -2,6 +2,8 @@ extends layout
 block content
 	ol
 		for comment in comments
-			div 
-				p(style="font-size: 18px")
-				label(style="font-size; color: #707070") #{.user}
+			div(style="border: 1px solid #404040;width: 200px;padding: 1%") 
+				p(style="font-size: 18px") #{comment.body}
+				label(style="font-size; color: #707070") #{comment.user}
+		textarea(cols=50, rows=10, placeholder="Comment")
+		input(type="text", placeholder="Name")
