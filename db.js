@@ -27,9 +27,8 @@ var siteSchema = new Schema({
 var commentSchema = new Schema({
     id: ObjectId,
     body: String,
-    cudos: Number,
     user: String,
-    date: String
+    date: Number
 });
 
 var user = db.model('user', userSchema);
