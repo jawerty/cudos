@@ -30,7 +30,7 @@ app.configure(function(){
 });
 
 app.configure('development', function(){
-  ROOT = "http://localhost:3000"
+  ROOT = "http://cudos-io.herokuapp.com"
   app.use(express.errorHandler());
 });
 
