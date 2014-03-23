@@ -1,11 +1,21 @@
 extends layout
 block content
 	ol
+		- n = parseInt(page) + 1
+		- b = parseInt(page) - 1
 		for site in links
 			li
 				a(href="#{site.link}") #{site.title}
 
 				label(style="color: #ff6b54") &nbsp;&nbsp; #{site.cudos}
+	if page <= 0
 		form(method="get")
+			input(type="hidden" name="page" value="#{n}")
+			input(type="submit", value="next")
+	else
+		form(method="get")
+			input(type="hidden" name="page" value="#{b}" )
 			input(type="submit", value="back", onclick="")
+		form(method="get")
+			input(type="hidden" name="page" value="#{n}")
 			input(type="submit", value="next")
