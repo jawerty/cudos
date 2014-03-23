@@ -38,9 +38,10 @@ exports.generate_post = function (req, res) {
 				category: category,
 				bid: h
 		    });
+
 		    newSite.save();
 		    _error = "Here's your button, nigga"
-		    _button = "<div id='cudos_button'></div><script type='text/javascript' >url = document.URL;iframe = document.createElement('IFRAME'); iframe.setAttribute('src', 'http://cudos-io.herokuapp.com/btn/"+h+"?url='+url);iframe.style.width = 120+'px'; iframe.style.height = 60+'px'; iframe.style.name='"+title+"'; document.getElementById('cudos_button').appendChild(iframe); </script>"
+		    _button = "<div id='cudos_button'></div><script type='text/javascript' >url = document.URL;iframe = document.createElement('IFRAME'); iframe.setAttribute('src', 'http://cudos-io.herokuapp.com/btn/"+h+"?url='+url);iframe.style.minWidth = 120+'px'; iframe.style.height = 60+'px'; iframe.frameBorder='0';iframe.style.name='"+title+"'; document.getElementById('cudos_button').appendChild(iframe); </script>"
 
  			res.redirect("/getcudos");
 
@@ -70,7 +71,7 @@ exports.location_post = function (req, res) {
 	bid = req.body.bid;
 	cudos = req.body.cudos;
 	link = req.body.link;
-	console.log("link: "+link)
+	console.log("link: "+cudos)
 	if(site.findOne({bid: bid}, function(err, sites){
 		if (sites) {
 			sites.cudos = cudos
