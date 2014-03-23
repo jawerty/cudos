@@ -22,6 +22,12 @@ a:hover {
 	color: #ff6b54;
 }
 
+input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
 ul {
 	list-style: none;
 }
@@ -68,8 +74,6 @@ li {
 #tabs li a:hover {
 	color: #ff6b54;
 }
-
-
 
 #content {
 	width:100%;

@@ -1,5 +1,14 @@
 extends layout
 block content
-	div(style="text-align: center")
-		h1 Here's your button
-		div(style="padding:5%;font-size: 24px;border: 1px solid #ccc; border-radius: 5px;")= button
+	div(style="text-align: center; border: 1px solid #ccc;")
+		h1(style="width: 100%; font-size: 300%;") Create your cudos button
+		div(style="padding:5%;font-size: 24px;border: 1px solid #ccc;")
+			form(method="post" action="/getcudos")
+				p= error
+				input(type="text", name="title", style="padding: 1%; font-size: 200%;" placeholder="Enter your title")
+				br
+				br
+				input(type="text", name="category", style="padding: 1%; font-size: 200%;" placeholder="Enter your category")
+				br
+				br
+				input(type="submit", value="Get Cudos", style="background-color: #ff6b54; outline: none; box-shadow: none; border-radius: 5px; color: #fff; padding: 1%; font-size: 150%")

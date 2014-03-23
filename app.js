@@ -12,7 +12,8 @@ var express = require('express')
   , path = require('path');
 
 var app = express();
-
+_button = ""
+_error = ""
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
@@ -37,6 +38,7 @@ app.configure('production', function(){
 app.get('/', home.home);
 app.get('/btn/:bid', button.location);
 app.get('/getcudos', button.generate);
+app.post('/getcudos', button.generate_post);
 app.get('/c/:category/:type', categories.index);
 app.get('/u/:username', user.list);
 
