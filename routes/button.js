@@ -50,7 +50,9 @@ exports.generate_post = function (req, res) {
 exports.location = function (req, res) {
 	bid = req.params.bid
 
-	if(site.findOne(bid: bid)){
-		
-	};
+	if(site.findOne({bid: bid}, function(err, match){
+		if (match) {
+
+		}
+	}));
 };

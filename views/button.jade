@@ -1,0 +1,38 @@
+style(type='text/css')
+  #theC {
+    width: 50px;
+    height: 50px;
+    border: white;
+    border-radius: 1em;
+    display: inline;
+    float: left;
+    }
+  #theC:hover { background-color: black; opacity: 0.7;}
+  #counter {
+    margin-left: 10px;
+    background-color: #f0f0f0;
+    border: 4px solid lightGray;
+    border-radius: 80px 10px 10px 80px;
+    display: inline;
+    padding: 12px;
+    float: left;
+    color: #ff6b54;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+  }
+  input#theC(src='images/theC.png', type='image')
+  #counter
+    | 3,000,424
+  script(type='text/javascript')
+    buttonEnabled = new Boolean(1);
+    var theC = document.getElementById("theC");
+    var counter = document.getElementById("counter");
+    theC.onclick=function(){
+    if(buttonEnabled){
+    buttonEnabled=0;
+    theC.style.opacity= '0.2';
+    }
+    else{
+    buttonEnabled=1;
+    theC.style.opacity= '';
+    }
+    };
