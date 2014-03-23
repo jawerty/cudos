@@ -77,6 +77,13 @@ li {
 #tabs li a:hover {
 	color: #ff6b54;
 }
+
+#categories {
+	display:none;
+	margin-top: 2%;
+	word-break: break-all;
+}
+
 #caret {
   margin-left: 2px;
   width: 10px;
@@ -86,7 +93,7 @@ li {
 #content {
 	width:100%;
 	float:left;
-	margin: 40px 0px;
+	margin: 1% 0px;
 	background-color: #f0f0f0;
 }
 
@@ -125,4 +132,18 @@ li {
 	width:100%;
 	margin: 0px auto;
 	text-align: center;
+}
+
+#categories a {
+	color: #ff6b54;
+	font-size: 25px;
+
+}
+
+li a:hover {
+	cursor: pointer;
+}
+
+#categories a:hover {
+	color: #404040;	
 }
