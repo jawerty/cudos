@@ -20,7 +20,8 @@ var siteSchema = new Schema({
 	link: String,
 	cudos: Number,
     category: String,
-    bid: String
+    bid: String,
+    date: Number
 });
 
 var commentSchema = new Schema({

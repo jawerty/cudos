@@ -36,11 +36,12 @@ exports.generate_post = function (req, res) {
 				title: title,
 				cudos: 0,
 				category: category,
-				bid: h
+				bid: h,
+				date: new Date().getTime()
 		    });
 
 		    newSite.save();
-		    _error = "Here's your button, nigga"
+		    _error = "Here's your button, friend"
 		    _button = "<div id='cudos_button'></div><script type='text/javascript' >url = document.URL;iframe = document.createElement('IFRAME'); iframe.setAttribute('src', 'http://cudos-io.herokuapp.com/btn/"+h+"?url='+url);iframe.style.minWidth = 120+'px'; iframe.style.height = 60+'px'; iframe.frameBorder='0';iframe.style.name='"+title+"'; document.getElementById('cudos_button').appendChild(iframe); </script>"
 
  			res.redirect("/getcudos");

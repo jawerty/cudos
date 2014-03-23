@@ -43,6 +43,7 @@ app.get('/btn/:bid', button.location);
 app.post('/btn/:bid', button.location_post);
 app.get('/getcudos', button.generate);
 app.post('/getcudos', button.generate_post);
+app.get('/c/:category', categories.index);
 app.get('/c/:category/:type', categories.index);
 app.get('/u/:username', user.list);
 

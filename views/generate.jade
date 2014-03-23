@@ -6,11 +6,15 @@ block content
 			form(method="post" action="/getcudos")
 				p(style="font-size: 16px") #{error}
 				br
-				div(style="border-radius: 5px;font-size: 24px; margin-bottom: 20px;")= button 
-				input(type="text", name="title", style="padding: 1%; font-size: 200%;" placeholder="Enter your title" REQUIRED)
-				br
-				br
-				input(type="text", name="category", style="padding: 1%; font-size: 200%;" placeholder="Enter your category" REQUIRED)
-				br
-				br
-				input(type="submit", value="Get Cudos", style="background-color: #ff6b54; outline: none; box-shadow: none; border-radius: 5px; color: #fff; padding: 1%; font-size: 150%")
+				if button != ""
+					textarea(rows="10", cols="60", style="font-size: 120%")
+						div(style="border-radius: 5px;font-size: 24px; margin-bottom: 20px;")= button 
+					p Copy to Clipboard using ctrl+c
+				else 
+					input(type="text", name="title", style="padding: 1%; font-size: 200%;" placeholder="Enter your title" REQUIRED)
+					br
+					br
+					input(type="text", name="category", style="padding: 1%; font-size: 200%;" placeholder="Enter your category" REQUIRED)
+					br
+					br
+					input(type="submit", value="Get Cudos", style="background-color: #ff6b54; outline: none; box-shadow: none; border-radius: 5px; color: #fff; padding: 1%; font-size: 150%")
