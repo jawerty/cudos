@@ -24,7 +24,7 @@ exports.generate_post = function (req, res) {
 
 	h = genID()
 	_button = "<iframe src='http://cudos-io.herokuapp.com/btn/"+h+"' name="+title+"></iframe>"
- 	
+
 	if(site.findOne({bid: h}, function(err, sites){
  		if(sites){
  			_error = "This has already been posted, try again."
@@ -48,5 +48,9 @@ exports.generate_post = function (req, res) {
 };
 
 exports.location = function (req, res) {
-	res.send("")
+	bid = req.params.bid
+
+	if(site.findOne(bid: bid)){
+		
+	};
 };
