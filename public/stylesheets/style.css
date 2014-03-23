@@ -77,15 +77,11 @@ li {
 #tabs li a:hover {
 	color: #ff6b54;
 }
-<<<<<<< HEAD
-=======
 #caret {
   margin-left: 2px;
   width: 10px;
   height: 10px;
 }
-
->>>>>>> ugh
 
 #content {
 	width:100%;
