@@ -65,7 +65,7 @@ li {
     border-style: none; 
     border-radius: 1em; 
     float: top;
-  	margin-top: -45px;
+  	margin-top: -32%;
   	display: inline;
 
 
@@ -73,7 +73,7 @@ li {
 #theHeadC:hover { background-color: black; opacity: 0.7;}
 
 #tabs {
-	margin-top: 50px;
+	margin-top: 3.5%;
 	float:right;
 }
 
@@ -83,7 +83,7 @@ li {
 }	
 
 #tabs li a {
-	font-size: 25px;
+	font-size: 25%;
 	color: #505050;
 }
 
