@@ -44,8 +44,10 @@ li {
 }
 
 #title {
+	max-width: 55%;
 	vertical-align:middle;
 	float:left;
+
 }
 
 #tabs {
