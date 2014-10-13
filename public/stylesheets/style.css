@@ -23,9 +23,10 @@ a:hover {
 }
 
 input {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+	border: 1px solid #ccc;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 100%;
 }
 
 ul {
@@ -33,11 +34,10 @@ ul {
 }
 
 li {
-	font-size: 25px;
+	font-size: 21px;
 }
 
 #header {
-    background-color: #ffe9dd;
     border-bottom: 1px solid #ff6b54;
     /*padding: 5px;*/
 	width:80%;
@@ -48,9 +48,8 @@ li {
 
 #logo {
 	float: left;
-	margin-top: 25px;
 	height: 90px;
-	width:90px;
+	width: 90px;
 
 }
 
@@ -62,8 +61,8 @@ li {
 }
 
 #theHeadC {
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
     border-style: none; 
     border-radius: 1em; 
     float: top;
@@ -107,7 +106,7 @@ li {
 	width:82%;
 	float:left;
 	margin: 1% 0px;
-	background-color: #f0f0f0;
+	background-color: #fff;
 	padding-left: 9%;
 	padding-right: 9%;
 }
