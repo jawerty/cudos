@@ -54,7 +54,6 @@ li {
 }
 
 #title {
-	max-width: 55%;
 	vertical-align:middle;
 	float:left;
 
@@ -64,7 +63,7 @@ li {
     width: 100px;
     height: 100px;
     border-style: none; 
-    border-radius: 1em; 
+    border-radius: 2px; 
     float: top;
   	margin-top: -25%;
   	display: inline;
