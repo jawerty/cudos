@@ -35,11 +35,13 @@ exports.generate_post = function (req, res) {
  			var newSite = new site({ 
 				title: title,
 				cudos: 0,
-				category: category,
+				category: category.toLowerCase(),
 				bid: h,
 				date: new Date().getTime()
 		    });
 
+ 			console.log("site "+title+" added.")
+ 			
 		    newSite.save();
 		    _error = "Here's your button, friend"
 		    _button = "<div id='cudos_button'></div><script type='text/javascript' >url = document.URL;iframe = document.createElement('IFRAME'); iframe.setAttribute('src', 'http://cudos-io.herokuapp.com/btn/"+h+"?url='+url);iframe.style.minWidth = 120+'px'; iframe.style.height = 60+'px'; iframe.frameBorder='0';iframe.style.name='"+title+"'; document.getElementById('cudos_button').appendChild(iframe); </script>"

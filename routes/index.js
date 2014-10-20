@@ -8,6 +8,11 @@ exports.home = function (req, res) {
 
 	site.find({}).sort('-cudos').limit(25).skip(skipNum).exec(function(err, sites) { 
 		if (sites) {
+			if (sites.length <= 0) {
+				sites = false;
+			}
+
+			console.log(sites)
 			res.render('categories', {
 		        title: 'cudos',
 		        layout: 'layout',

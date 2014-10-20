@@ -1,21 +1,24 @@
 extends layout
 block content
-	ol
-		- n = parseInt(page) + 1
-		- b = parseInt(page) - 1
-		for site in links
-			li
-				a(href="#{site.link}") #{site.title}
-
-				label(style="color: #ff6b54") &nbsp;&nbsp; #{site.cudos}
-	if page <= 0
-		form(method="get")
-			input(type="hidden" name="page" value="#{n}")
-			input(type="submit", value="next", style="float: left; -webkit-appearance: none; appearance: none; background-color: transparent; outline: none;border:1px solid #eee; box-shadow: none; border-radius: 0px; color: #ff6b54; padding: .1%; font-size: 150%")
+	if links == false
+		p There are no links on this page.
 	else
-		form(method="get")
-			input(type="hidden" name="page" value="#{b}" )
-			input(type="submit", value="back", style=" box-shadow: none; color: #ff6b54; font-size: 120%")
-		form(method="get")
-			input(type="hidden" name="page" value="#{n}")
-			input(type="submit", value="next", style=" box-shadow: none; color: #ff6b54; font-size: 120%")
+		ol
+			- n = parseInt(page) + 1
+			- b = parseInt(page) - 1
+			for site in links
+				li
+					a(href="#{site.link}") #{site.title}
+
+					label(style="color: #ff6b54") &nbsp;&nbsp; #{site.cudos}
+		if page <= 0
+			form(method="get")
+				input(type="hidden" name="page" value="#{n}")
+				input(type="submit", value="next", style="float: left; -webkit-appearance: none; appearance: none; background-color: transparent; outline: none;border:1px solid #eee; box-shadow: none; border-radius: 0px; color: #ff6b54; padding: .1%; font-size: 150%")
+		else
+			form(method="get")
+				input(type="hidden" name="page" value="#{b}" )
+				input(type="submit", value="back", style=" box-shadow: none; color: #ff6b54; font-size: 120%")
+			form(method="get")
+				input(type="hidden" name="page" value="#{n}")
+				input(type="submit", value="next", style=" box-shadow: none; color: #ff6b54; font-size: 120%")

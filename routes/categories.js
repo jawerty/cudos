@@ -20,6 +20,11 @@ exports.index = function(req, res) {
 	}
     
 	site.find({category: category.toLowerCase()}).sort('-'+t).limit(25).skip(skipNum).exec(function(err, sites) { 
+		if (sites.length <= 0) {
+			sites = false;
+			console.log("nothing in the category.")
+		}
+
 		if (sites) {
 			res.render('categories', {
 		        title: 'cudos',
@@ -29,7 +34,7 @@ exports.index = function(req, res) {
 		    });
     	} else {
     		console.log("not working")
-    		res.end()
+    		res.redirect("/")
     	}
 	});
 };  
